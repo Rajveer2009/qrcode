@@ -13,6 +13,4 @@ def main(data):
         return send_file(img_path, as_attachment=True)
     finally:
         os.remove(img_path)
-
-if __name__ == '__main__':
-    app.run()
+   
