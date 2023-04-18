@@ -10,7 +10,7 @@ def main(data):
     img_path = os.path.join('static', f'{data}.png')
     img.save(img_path)
     try:
-        return send_file(img_path, as_attachment=True)
+        return send_file(img_path, mimetype='image/png', as_attachment=True)
     finally:
         os.remove(img_path)
    
